@@ -84,6 +84,7 @@ header h2 {
 section h2 {
     font-size: 2em;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 hr {
@@ -108,7 +109,7 @@ main {
 }
 
 main > section {
-    max-width: 800px;
+    max-width: 1000px;
 }
 
 /* nav > ul{
@@ -124,6 +125,7 @@ nav > ul > li {
 header {
     display: flex;
     flex-direction: column;
+    margin-bottom: 50px;
 
     height: 850px;
 
@@ -131,8 +133,9 @@ header {
 }
 
 header h1{
-    background-color: black;
-    color: white;
+    background-color: var(--color-dark);
+    color: var(--color-light);
+    justify-content: center;
 }
 
 .header-image {
@@ -153,13 +156,18 @@ header h1{
 
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    /* justify-content: space-around; */
+    justify-content: center;
 
-    color: white;
+    color: var(--color-light);
 
-    width: 300px;
+    width: 400px;
     height: 100%;
     padding: 20px;
+}
+
+.header-desc > * {
+    padding: 30px;
 }
 
 .header-number span {
@@ -173,11 +181,33 @@ header h1{
 
 section {
     padding: 20px;
+    margin-bottom: 50px;
 }
 
-.services {
-    background-color: #b6d1d8;
+.about {
+    display: flex;
 }
+
+.about-image {
+    display: none;
+    background-image: url('../assets/pexels-fauxels-3183197.jpg');
+    width: 50%;
+    background-size: cover;
+    border-radius: 10px;
+}
+
+.about-desc > div {
+    
+    background-color: #dde4e6;
+    padding: 5px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.about p {
+    padding: 20px;
+}
+
 
 .services > div {
     display: flex;
@@ -186,14 +216,61 @@ section {
 }
 
 .service {
-    border: 1px solid black;
-    border-radius: 5px;
+    background-color: #dde4e6;
+    border-radius: 10px;
     margin: 5px;
     padding: 10px;
     max-width: 300px;
-    background-color: var(--color-dark);
-    color: var(--color-light);
+    min-height: 300px;
 }
+
+.contact {
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+}
+
+.contact > div {
+    margin: 30px;
+}
+
+.contact svg {
+    height: 30px;
+}
+
+
+.contact-number {
+    display: flex;
+    align-items: center;
+    font-size: 1.3em;
+    margin-top: 30px;
+}
+
+.contact-location {
+    padding-top: 20px;
+
+    display: flex;
+}
+
+.contact h4 {
+    text-align: center;
+    font-size: 1.2em;
+    padding: 10px;
+}
+
+.contact table {
+    color: gray;
+}
+
+.contact tr {
+    border-top: 1px solid lightgray;
+}
+
+.contact td {
+    padding: 10px;
+}
+
 
 
 footer {
@@ -230,13 +307,17 @@ footer {
         background-size: cover;
         background-position: center;
     }
+
+    .about-desc {
+        width: 50%;
+    }
+
+    .about-image {
+        display: inline;
+    }
 }
 
 @media screen and (min-width: 1000px) {
-
-    header {
-        height: 600px;
-    }
 
     .header-container {
         justify-content: center;
@@ -248,9 +329,7 @@ footer {
     }
 
     .header-image {
-        height: 100%;
         width: 800px;
-        background-size: cover;
-        background-position: center;
+        margin-right: 20px;
     }
 }
